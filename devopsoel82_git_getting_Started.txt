@@ -1,0 +1,902 @@
+[asokone@devopsoel82 myweb]$ pwd
+/home/asokone/docker/myweb
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ which git
+/usr/bin/git
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git --version
+git version 2.31.1
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ goit config --global user.name "Andialy Sokone"
+bash: goit: command not found...
+^C
+[asokone@devopsoel82 myweb]$ git config --global user.name "Andialy Sokone"
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git config --global user.email "andialy.sokone@gmai     l.com"
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ echo; echo ============= Initialize Git ===========     =; echo
+
+============= Initialize Git ============
+
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ pwd
+/home/asokone/docker/myweb
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git init
+hint: Using 'master' as the name for the initial branch. This default branch nam     e
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint:   git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint:   git branch -m <name>
+Initialized empty Git repository in /home/asokone/docker/myweb/.git/
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git config --global init.defaultBranch main
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ ls -al
+total 116
+drwxrwxr-x.  3 asokone asokone   196 Jul  1 12:13 .
+drwxrwxr-x. 14 asokone asokone   196 Mar 30 06:20 ..
+-rw-rw-r--.  1 asokone asokone 86216 Oct  2  2020 AndialySokone.jpg
+-rw-rw-r--.  1 asokone asokone   457 Aug 19  2020 application.py
+-rwxr-xr-x.  1 asokone asokone  1530 Aug 11  2020 counter.pl
+-rw-r--r--.  1 asokone asokone     2 Aug 11  2020 counter.txt
+-rw-rw-r--.  1 asokone asokone   480 Sep 25  2020 Dockerfile
+-rw-rw-r--.  1 asokone asokone   439 Sep 25  2020 Dockerfile.Alpine
+-rw-rw-r--.  1 asokone asokone   812 Sep 25  2020 Dockerfile.oraclelunix8.2
+drwxrwxr-x   7 asokone asokone   119 Jul  1 12:13 .git
+-rw-rw-r--.  1 asokone asokone   418 Oct  3  2020 index.html
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ ls - la | grep git
+ls: cannot access '-': No such file or directory
+ls: cannot access 'la': No such file or directory
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ ls -la | grep git
+drwxrwxr-x   7 asokone asokone   119 Jul  1 12:13 .git
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ ls -al .git/
+total 16
+drwxrwxr-x  7 asokone asokone  119 Jul  1 12:13 .
+drwxrwxr-x. 3 asokone asokone  196 Jul  1 12:13 ..
+drwxrwxr-x  2 asokone asokone    6 Jul  1 12:13 branches
+-rw-rw-r--  1 asokone asokone   92 Jul  1 12:13 config
+-rw-rw-r--  1 asokone asokone   73 Jul  1 12:13 description
+-rw-rw-r--  1 asokone asokone   23 Jul  1 12:13 HEAD
+drwxrwxr-x  2 asokone asokone 4096 Jul  1 12:13 hooks
+drwxrwxr-x  2 asokone asokone   21 Jul  1 12:13 info
+drwxrwxr-x  4 asokone asokone   30 Jul  1 12:13 objects
+drwxrwxr-x  4 asokone asokone   31 Jul  1 12:13 refs
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ tree .git/
+.git/
+├── branches
+├── config
+├── description
+├── HEAD
+├── hooks
+│   ├── applypatch-msg.sample
+│   ├── commit-msg.sample
+│   ├── fsmonitor-watchman.sample
+│   ├── post-update.sample
+│   ├── pre-applypatch.sample
+│   ├── pre-commit.sample
+│   ├── pre-merge-commit.sample
+│   ├── prepare-commit-msg.sample
+│   ├── pre-push.sample
+│   ├── pre-rebase.sample
+│   ├── pre-receive.sample
+│   ├── push-to-checkout.sample
+│   └── update.sample
+├── info
+│   └── exclude
+├── objects
+│   ├── info
+│   └── pack
+└── refs
+    ├── heads
+    └── tags
+
+9 directories, 17 files
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ echo; echo ============= Git Status ============; e     cho
+
+============= Git Status ============
+
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        AndialySokone.jpg
+        Dockerfile
+        Dockerfile.Alpine
+        Dockerfile.oraclelunix8.2
+        application.py
+        counter.pl
+        counter.txt
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ echo; echo ============= Adding files to Staging Ar     ea  ============; echo
+
+============= Adding files to Staging Area ============
+
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ ls
+AndialySokone.jpg  counter.pl   Dockerfile         Dockerfile.oraclelunix8.2
+application.py     counter.txt  Dockerfile.Alpine  index.html
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git add AndialySokone.jpg counter.pl Dockerfile Doc     kerfile.oraclelunix8.2 application.py counter.txt Dockerfile.Alpine index.html
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   AndialySokone.jpg
+        new file:   Dockerfile
+        new file:   Dockerfile.Alpine
+        new file:   Dockerfile.oraclelunix8.2
+        new file:   application.py
+        new file:   counter.pl
+        new file:   counter.txt
+        new file:   index.html
+
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ echo; echo ============= Making Commits  ==========     ==; echo
+
+============= Making Commits ============
+
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git commit -m "Committing my first WebApp"
+[master (root-commit) ac0cfe0] Committing my first WebApp
+ 8 files changed, 175 insertions(+)
+ create mode 100644 AndialySokone.jpg
+ create mode 100644 Dockerfile
+ create mode 100644 Dockerfile.Alpine
+ create mode 100644 Dockerfile.oraclelunix8.2
+ create mode 100644 application.py
+ create mode 100755 counter.pl
+ create mode 100644 counter.txt
+ create mode 100644 index.html
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git status
+On branch master
+nothing to commit, working tree clean
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ echo; echo ============= Git Log  ============; ech     o
+
+============= Git Log ============
+
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git log
+commit ac0cfe0b60da6dc75d0d374b8355fbbb55b8fe53 (HEAD -> master)
+Author: Andialy Sokone <andialy.sokone@gmail.com>
+Date:   Sat Jul 1 12:21:06 2023 -0700
+
+    Committing my first WebApp
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ pwd
+/home/asokone/docker/myweb
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git add README.md
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ get status
+bash: get: command not found...
+Similar commands are::
+'git'
+'GET'
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   README.md
+
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git commit -m "Adding README.md"
+[master 7e6ead8] Adding README.md
+ 1 file changed, 170 insertions(+)
+ create mode 100644 README.md
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git status
+On branch master
+nothing to commit, working tree clean
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git log
+commit 7e6ead80f651aedba9e4b7ce04556f9e198e3ce7 (HEAD -> master)
+Author: Andialy Sokone <andialy.sokone@gmail.com>
+Date:   Sat Jul 1 16:34:05 2023 -0700
+
+    Adding README.md
+
+commit ac0cfe0b60da6dc75d0d374b8355fbbb55b8fe53
+Author: Andialy Sokone <andialy.sokone@gmail.com>
+Date:   Sat Jul 1 12:21:06 2023 -0700
+
+    Committing my first WebApp
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ ls
+AndialySokone.jpg  counter.txt        Dockerfile.oraclelunix8.2
+application.py     Dockerfile         index.html
+counter.pl         Dockerfile.Alpine  README.md
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ cat index.html
+<html>
+        <head>
+                <title>This is Andialy's First Webpage</title>
+        </head>
+        <body>
+                <center>
+<hr>
+               <img src="/AndialySokone.jpg" width="200" height="256">
+                        <pre>
+                        <tt>
+<hr>
+Hello!
+I am <b> Andialy Sokone </b>
+This is my first Web Site built on docker container using perl as CGI counter
+See how easy docker is !!
+<hr>
+                        </tt>
+                        </pre>
+                </center>
+        </body>
+</html>
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ sed -e 's/200/220/g' -i index.html
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ cat index.html
+<html>
+        <head>
+                <title>This is Andialy's First Webpage</title>
+        </head>
+        <body>
+                <center>
+<hr>
+               <img src="/AndialySokone.jpg" width="220" height="256">
+                        <pre>
+                        <tt>
+<hr>
+Hello!
+I am <b> Andialy Sokone </b>
+This is my first Web Site built on docker container using perl as CGI counter
+See how easy docker is !!
+<hr>
+                        </tt>
+                        </pre>
+                </center>
+        </body>
+</html>
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git add .
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git commit -m "Updated Image width on Index.html file"
+[master 681c587] Updated Image width on Index.html file
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git status
+On branch master
+nothing to commit, working tree clean
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git log
+commit 681c587b9a06351beb60dbac4771d99c6d418f30 (HEAD -> master)
+Author: Andialy Sokone <andialy.sokone@gmail.com>
+Date:   Sat Jul 1 16:51:52 2023 -0700
+
+    Updated Image width on Index.html file
+
+commit 7e6ead80f651aedba9e4b7ce04556f9e198e3ce7
+Author: Andialy Sokone <andialy.sokone@gmail.com>
+Date:   Sat Jul 1 16:34:05 2023 -0700
+
+    Adding README.md
+
+commit ac0cfe0b60da6dc75d0d374b8355fbbb55b8fe53
+Author: Andialy Sokone <andialy.sokone@gmail.com>
+Date:   Sat Jul 1 12:21:06 2023 -0700
+
+    Committing my first WebApp
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git checkout ac0cfe0b60da6dc75d0d374b8355fbbb55b8fe53
+Note: switching to 'ac0cfe0b60da6dc75d0d374b8355fbbb55b8fe53'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at ac0cfe0 Committing my first WebApp
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ ls -al index.html
+-rw-rw-r-- 1 asokone asokone 418 Jul  1 17:00 index.html
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ cat index.html
+<html>
+        <head>
+                <title>This is Andialy's First Webpage</title>
+        </head>
+        <body>
+                <center>
+<hr>
+               <img src="/AndialySokone.jpg" width="200" height="256">
+                        <pre>
+                        <tt>
+<hr>
+Hello!
+I am <b> Andialy Sokone </b>
+This is my first Web Site built on docker container using perl as CGI counter
+See how easy docker is !!
+<hr>
+                        </tt>
+                        </pre>
+                </center>
+        </body>
+</html>
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git branch
+* (HEAD detached at ac0cfe0)
+  master
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git checkout master
+Previous HEAD position was ac0cfe0 Committing my first WebApp
+Switched to branch 'master'
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git branch
+* master
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git status
+On branch master
+nothing to commit, working tree clean
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ ls
+AndialySokone.jpg  counter.txt        Dockerfile.oraclelunix8.2
+application.py     Dockerfile         index.html
+counter.pl         Dockerfile.Alpine  README.md
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ more index.html
+<html>
+        <head>
+                <title>This is Andialy's First Webpage</title>
+        </head>
+        <body>
+                <center>
+<hr>
+               <img src="/AndialySokone.jpg" width="220" height="256">
+                        <pre>
+                        <tt>
+<hr>
+Hello!
+I am <b> Andialy Sokone </b>
+This is my first Web Site built on docker container using perl as CGI counter
+See how easy docker is !!
+<hr>
+                        </tt>
+                        </pre>
+                </center>
+        </body>
+</html>
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git branch SimpleHTTPServer
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git branch
+  SimpleHTTPServer
+* master
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git --help
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone             Clone a repository into a new directory
+   init              Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add               Add file contents to the index
+   mv                Move or rename a file, a directory, or a symlink
+   restore           Restore working tree files
+   rm                Remove files from the working tree and from the index
+   sparse-checkout   Initialize and modify the sparse-checkout
+
+examine the history and state (see also: git help revisions)
+   bisect            Use binary search to find the commit that introduced a bug
+   diff              Show changes between commits, commit and working tree, etc
+   grep              Print lines matching a pattern
+   log               Show commit logs
+   show              Show various types of objects
+   status            Show the working tree status
+
+grow, mark and tweak your common history
+   branch            List, create, or delete branches
+   commit            Record changes to the repository
+   merge             Join two or more development histories together
+   rebase            Reapply commits on top of another base tip
+   reset             Reset current HEAD to the specified state
+   switch            Switch branches
+   tag               Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch             Download objects and refs from another repository
+   pull              Fetch from and integrate with another repository or a local branch
+   push              Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git help -a
+See 'git help <command>' to read about a specific subcommand
+
+Main Porcelain Commands
+   add                  Add file contents to the index
+   am                   Apply a series of patches from a mailbox
+   archive              Create an archive of files from a named tree
+   bisect               Use binary search to find the commit that introduced a bug
+   branch               List, create, or delete branches
+   bundle               Move objects and refs by archive
+   checkout             Switch branches or restore working tree files
+   cherry-pick          Apply the changes introduced by some existing commits
+   citool               Graphical alternative to git-commit
+   clean                Remove untracked files from the working tree
+   clone                Clone a repository into a new directory
+   commit               Record changes to the repository
+   describe             Give an object a human readable name based on an available ref
+   diff                 Show changes between commits, commit and working tree, etc
+   fetch                Download objects and refs from another repository
+   format-patch         Prepare patches for e-mail submission
+   gc                   Cleanup unnecessary files and optimize the local repository
+   gitk                 The Git repository browser
+   grep                 Print lines matching a pattern
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git checkout SimpleHTTPServer
+Switched to branch 'SimpleHTTPServer'
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git status
+On branch SimpleHTTPServer
+nothing to commit, working tree clean
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git log
+commit 681c587b9a06351beb60dbac4771d99c6d418f30 (HEAD -> SimpleHTTPServer, master)
+Author: Andialy Sokone <andialy.sokone@gmail.com>
+Date:   Sat Jul 1 16:51:52 2023 -0700
+
+    Updated Image width on Index.html file
+
+commit 7e6ead80f651aedba9e4b7ce04556f9e198e3ce7
+Author: Andialy Sokone <andialy.sokone@gmail.com>
+Date:   Sat Jul 1 16:34:05 2023 -0700
+
+    Adding README.md
+
+commit ac0cfe0b60da6dc75d0d374b8355fbbb55b8fe53
+Author: Andialy Sokone <andialy.sokone@gmail.com>
+Date:   Sat Jul 1 12:21:06 2023 -0700
+
+    Committing my first WebApp
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git branch
+* SimpleHTTPServer
+  master
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ ls
+AndialySokone.jpg  counter.txt        Dockerfile.oraclelunix8.2
+application.py     Dockerfile         index.html
+counter.pl         Dockerfile.Alpine  README.md
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ cat application.py
+import http.server
+import socketserver
+
+class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
+    def do_GET(self):
+        if self.path == '/':
+            self.path = 'index.html'
+        return http.server.SimpleHTTPRequestHandler.do_GET(self)
+
+# Create an object of the above class
+handler_object = MyHttpRequestHandler
+
+PORT = 5000
+my_server = socketserver.TCPServer(("", PORT), handler_object)
+
+# Star the server
+my_server.serve_forever()
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ cat Dockerfile.oraclelunix8.2
+# ------------------------------------------------------------------------------
+# Dockerfile to build Oracle Linux container
+# images based on Oracle Linux 8.2
+# ------------------------------------------------------------------------------
+FROM oraclelinux:8.2
+
+
+RUN dnf install -y httpd
+RUN dnf install -y sudo
+RUN dnf install -y which
+RUN dnf install -y perl
+
+
+#RUN mkdir -p /var/www/cgi-bin
+WORKDIR /var/www/cgi-bin
+COPY counter.pl counter.pl
+COPY counter.txt counter.txt
+RUN chown apache:apache counter.pl counter.txt
+
+#RUN mkdir -p /var/www/html
+WORKDIR /var/www/html
+COPY AndialySokone.jpg AndialySokone.jpg
+COPY index.html index.html
+RUN chown apache:apache index.html AndialySokone.jpg
+
+LABEL maintainer="asokone@thecloudedu.com" \
+version="1.0.1"
+
+EXPOSE 80
+
+ENTRYPOINT /usr/sbin/httpd -D FOREGROUND
+
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ ls
+AndialySokone.jpg  counter.txt        Dockerfile.oraclelunix8.2
+application.py     Dockerfile         index.html
+counter.pl         Dockerfile.Alpine  README.md
+[asokone@devopsoel82 myweb]$ vi Dockerfile
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git add .
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git commit -m "Add all files to SampleHTTPServer branch"
+On branch SimpleHTTPServer
+nothing to commit, working tree clean
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git log
+commit 681c587b9a06351beb60dbac4771d99c6d418f30 (HEAD -> SimpleHTTPServer, master)
+Author: Andialy Sokone <andialy.sokone@gmail.com>
+Date:   Sat Jul 1 16:51:52 2023 -0700
+
+    Updated Image width on Index.html file
+
+commit 7e6ead80f651aedba9e4b7ce04556f9e198e3ce7
+Author: Andialy Sokone <andialy.sokone@gmail.com>
+Date:   Sat Jul 1 16:34:05 2023 -0700
+
+    Adding README.md
+
+commit ac0cfe0b60da6dc75d0d374b8355fbbb55b8fe53
+Author: Andialy Sokone <andialy.sokone@gmail.com>
+Date:   Sat Jul 1 12:21:06 2023 -0700
+
+    Committing my first WebApp
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+
+
+[asokone@devopsoel82 myweb]$ #vi README.md
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git commit -m "Add all files to SampleHTTPServer branch and updated README.md file"
+On branch SimpleHTTPServer
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        devopsoel82_git_getting_Started.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git log
+commit 681c587b9a06351beb60dbac4771d99c6d418f30 (HEAD -> SimpleHTTPServer, master)
+Author: Andialy Sokone <andialy.sokone@gmail.com>
+Date:   Sat Jul 1 16:51:52 2023 -0700
+
+    Updated Image width on Index.html file
+
+commit 7e6ead80f651aedba9e4b7ce04556f9e198e3ce7
+Author: Andialy Sokone <andialy.sokone@gmail.com>
+Date:   Sat Jul 1 16:34:05 2023 -0700
+
+    Adding README.md
+
+commit ac0cfe0b60da6dc75d0d374b8355fbbb55b8fe53
+Author: Andialy Sokone <andialy.sokone@gmail.com>
+[200~[asokone@devopsoel82 myweb]$ #vi README.md
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git commit -m "Add all files to SampleHTTPServer branch and updated README.md file"
+On branch SimpleHTTPServer
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        devopsoel82_git_getting_Started.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git log
+commit 681c587b9a06351beb60dbac4771d99c6d418f30 (HEAD -> SimpleHTTPServer, master)
+Author: Andialy Sokone <andialy.sokone@gmail.com>
+Date:   Sat Jul 1 16:51:52 2023 -0700
+
+    Updated Image width on Index.html file
+
+commit 7e6ead80f651aedba9e4b7ce04556f9e198e3ce7
+Author: Andialy Sokone <andialy.sokone@gmail.com>
+Date:   Sat Jul 1 16:34:05 2023 -0700
+
+    Adding README.md
+
+commit ac0cfe0b60da6dc75d0d374b8355fbbb55b8fe53
+Author: Andialy Sokone <andialy.sokone@gmail.com>
+Date:   Sat Jul 1 12:21:06 2023 -0700
+
+    Committing my first WebApp
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git add README.md
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git commit -m "Add all files to SampleHTTPServer branch and updated README.md file"
+[SimpleHTTPServer d60579d] Add all files to SampleHTTPServer branch and updated README.md file
+ 1 file changed, 1 insertion(+)
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git log
+commit d60579de1ec962e61654786f27a3e1cc224a6b4d (HEAD -> SimpleHTTPServer)
+Author: Andialy Sokone <andialy.sokone@gmail.com>
+Date:   Sun Jul 2 12:24:38 2023 -0700
+
+    Add all files to SampleHTTPServer branch and updated README.md file
+
+commit 681c587b9a06351beb60dbac4771d99c6d418f30 (master)
+Author: Andialy Sokone <andialy.sokone@gmail.com>
+Date:   Sat Jul 1 16:51:52 2023 -0700
+
+    Updated Image width on Index.html file
+
+commit 7e6ead80f651aedba9e4b7ce04556f9e198e3ce7
+Author: Andialy Sokone <andialy.sokone@gmail.com>
+Date:   Sat Jul 1 16:34:05 2023 -0700
+
+    Adding README.md
+
+commit ac0cfe0b60da6dc75d0d374b8355fbbb55b8fe53
+Author: Andialy Sokone <andialy.sokone@gmail.com>
+Date:   Sat Jul 1 12:21:06 2023 -0700
+
+    Committing my first WebApp
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git status
+On branch SimpleHTTPServer
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        devopsoel82_git_getting_Started.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git branch
+* SimpleHTTPServer
+  master
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git checkout main
+error: pathspec 'main' did not match any file(s) known to git
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git branch
+* SimpleHTTPServer
+  master
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git checkout
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git branch
+* SimpleHTTPServer
+  master
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git checkout main
+error: pathspec 'main' did not match any file(s) known to git
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git checkout master
+Switched to branch 'master'
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git branch
+  SimpleHTTPServer
+* master
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git merge SimpleHTTPServer
+Updating 681c587..d60579d
+Fast-forward
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git log
+commit d60579de1ec962e61654786f27a3e1cc224a6b4d (HEAD -> master, SimpleHTTPServer)
+Author: Andialy Sokone <andialy.sokone@gmail.com>
+Date:   Sun Jul 2 12:24:38 2023 -0700
+
+    Add all files to SampleHTTPServer branch and updated README.md file
+
+commit 681c587b9a06351beb60dbac4771d99c6d418f30
+Author: Andialy Sokone <andialy.sokone@gmail.com>
+Date:   Sat Jul 1 16:51:52 2023 -0700
+
+    Updated Image width on Index.html file
+
+commit 7e6ead80f651aedba9e4b7ce04556f9e198e3ce7
+Author: Andialy Sokone <andialy.sokone@gmail.com>
+Date:   Sat Jul 1 16:34:05 2023 -0700
+
+    Adding README.md
+
+commit ac0cfe0b60da6dc75d0d374b8355fbbb55b8fe53
+Author: Andialy Sokone <andialy.sokone@gmail.com>
+Date:   Sat Jul 1 12:21:06 2023 -0700
+
+    Committing my first WebApp
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$ git branch
+  SimpleHTTPServer
+* master
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+[asokone@devopsoel82 myweb]$
+
